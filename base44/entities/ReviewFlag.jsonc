@@ -1,0 +1,62 @@
+{
+  "name": "ReviewFlag",
+  "type": "object",
+  "properties": {
+    "flag_type": {
+      "type": "string",
+      "enum": [
+        "ngo_verification",
+        "donation_anomaly",
+        "withdrawal_large",
+        "withdrawal_spike",
+        "individual_fundraiser"
+      ]
+    },
+    "entity_type": {
+      "type": "string"
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "entity_name": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "reviewing",
+        "resolved",
+        "dismissed"
+      ],
+      "default": "open"
+    },
+    "assigned_to": {
+      "type": "string"
+    },
+    "resolution_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "flag_type",
+    "entity_id",
+    "reason"
+  ]
+}

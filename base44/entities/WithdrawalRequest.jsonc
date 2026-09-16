@@ -1,0 +1,52 @@
+{
+  "name": "WithdrawalRequest",
+  "type": "object",
+  "properties": {
+    "ngo_id": {
+      "type": "string"
+    },
+    "ngo_name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "paid"
+      ],
+      "default": "pending"
+    },
+    "admin_notes": {
+      "type": "string"
+    },
+    "reviewed_by": {
+      "type": "string"
+    },
+    "reviewed_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "large_flag": {
+      "type": "boolean",
+      "default": false
+    },
+    "spike_flag": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "ngo_id",
+    "ngo_name",
+    "amount",
+    "purpose"
+  ]
+}

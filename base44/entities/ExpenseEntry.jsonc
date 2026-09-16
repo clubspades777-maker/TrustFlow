@@ -1,0 +1,62 @@
+{
+  "name": "ExpenseEntry",
+  "type": "object",
+  "properties": {
+    "recipient_type": {
+      "type": "string",
+      "enum": [
+        "ngo",
+        "fundraiser"
+      ],
+      "default": "ngo"
+    },
+    "recipient_id": {
+      "type": "string"
+    },
+    "recipient_name": {
+      "type": "string"
+    },
+    "project_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "doc_type": {
+      "type": "string",
+      "enum": [
+        "invoice",
+        "receipt",
+        "utilization_certificate",
+        "project_report",
+        "beneficiary_info",
+        "photograph",
+        "ca_audit",
+        "other"
+      ]
+    },
+    "document_url": {
+      "type": "string"
+    },
+    "beneficiary_name": {
+      "type": "string"
+    },
+    "beneficiary_count": {
+      "type": "number",
+      "default": 1
+    },
+    "spent_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "recipient_id",
+    "recipient_name",
+    "amount",
+    "doc_type"
+  ]
+}

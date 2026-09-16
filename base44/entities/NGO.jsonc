@@ -1,0 +1,173 @@
+{
+  "name": "NGO",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "education",
+        "health",
+        "environment",
+        "women_children",
+        "elderly",
+        "disaster_relief",
+        "animal_welfare",
+        "livelihood",
+        "other"
+      ],
+      "default": "other"
+    },
+    "registration_number": {
+      "type": "string"
+    },
+    "pan": {
+      "type": "string"
+    },
+    "darpan_id": {
+      "type": "string"
+    },
+    "twelve_a": {
+      "type": "string",
+      "enum": [
+        "12A",
+        "12AB",
+        "none"
+      ],
+      "default": "none"
+    },
+    "twelve_a_number": {
+      "type": "string"
+    },
+    "ftr": {
+      "type": "string",
+      "enum": [
+        "FCRA_active",
+        "FCRA_pending",
+        "not_applicable"
+      ],
+      "default": "not_applicable"
+    },
+    "ftr_number": {
+      "type": "string"
+    },
+    "atg": {
+      "type": "string"
+    },
+    "registered_address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "pincode": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    },
+    "authorized_representative_name": {
+      "type": "string"
+    },
+    "authorized_representative_designation": {
+      "type": "string"
+    },
+    "authorized_representative_email": {
+      "type": "string"
+    },
+    "authorized_representative_phone": {
+      "type": "string"
+    },
+    "bank_account_name": {
+      "type": "string"
+    },
+    "bank_account_number": {
+      "type": "string"
+    },
+    "bank_ifsc": {
+      "type": "string"
+    },
+    "bank_name": {
+      "type": "string"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending_verification",
+        "verified",
+        "rejected",
+        "suspended"
+      ],
+      "default": "pending_verification"
+    },
+    "verification_notes": {
+      "type": "string"
+    },
+    "verified_by": {
+      "type": "string"
+    },
+    "verified_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "goal_amount": {
+      "type": "number"
+    },
+    "total_raised": {
+      "type": "number",
+      "default": 0
+    },
+    "total_utilized": {
+      "type": "number",
+      "default": 0
+    },
+    "beneficiary_summary": {
+      "type": "string"
+    },
+    "needs_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "registered_address",
+    "city",
+    "state"
+  ]
+}

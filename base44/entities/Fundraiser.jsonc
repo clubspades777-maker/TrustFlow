@@ -1,0 +1,80 @@
+{
+  "name": "Fundraiser",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "beneficiary_name": {
+      "type": "string"
+    },
+    "beneficiary_story": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "medical",
+        "education",
+        "emergency",
+        "livelihood",
+        "other"
+      ],
+      "default": "medical"
+    },
+    "goal_amount": {
+      "type": "number"
+    },
+    "raised_amount": {
+      "type": "number",
+      "default": 0
+    },
+    "creator_name": {
+      "type": "string"
+    },
+    "creator_email": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "closed",
+        "pending_review"
+      ],
+      "default": "active"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "medical_document_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "beneficiary_name",
+    "goal_amount",
+    "creator_email"
+  ]
+}
